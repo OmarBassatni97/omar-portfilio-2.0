@@ -83,6 +83,13 @@ export const projectsData = [
     tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
     imageUrl: dilmunImg,
   },
+  {
+    title: 'Weather App',
+    description:
+      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
+    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+    imageUrl: weatherImg,
+  },
 ] as const;
 
 export const skillsData = [
