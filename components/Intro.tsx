@@ -1,15 +1,19 @@
 'use client'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 import { FaGithubSquare } from 'react-icons/fa'
+import { useInView } from 'react-intersection-observer'
+import { useActiveSectionContext } from '@/context/active-section-context'
+import { useSectionInView } from '@/lib/hooks'
 
 const Intro = () => {
+    const { ref } = useSectionInView("Home")
     return (
-        <section id='home' className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28'>
+        <section ref={ref} id='home' className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28'>
             <div className='flex items-center justify-center'>
                 <div className='relative'>
                     <motion.div
